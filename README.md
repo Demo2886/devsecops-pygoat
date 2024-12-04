@@ -1,11 +1,21 @@
 # PyGoat
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 intentionally vuln web Application Security in django.
 our roadmap build intentionally vuln web Application in django. The Vulnerability can based on OWASP top ten
 <br>
+• A1:2017-Injection<br>
+• A2:2017-Broken Authentication<br>
+• A3:2017-Sensitive Data Exposure<br>
+• A4:2017-XML External Entities (XXE)<br>
+• A5:2017-Broken Access Control<br>
+• A6:2017-Security Misconfiguration<br>
+• A7:2017-Cross-Site Scripting (XSS)<br>
+• A8:2017-Insecure Deserialization<br>
+• A9:2017-Using Components with Known Vulnerabilities<br>
+• A10:2017-Insufficient Logging & Monitoring<br>
 
 Table of Contents
 =================
@@ -16,7 +26,7 @@ Table of Contents
       * [Docker Container](#docker-container)
       * [Installation Video](#installation-video)
    * [Uninstallation](#uninstallation)
-   * [Solutions](/Solutions/solution.md)
+   * [Solutions](#solutions)
    * [For Developers](/docs/dev_guide.md)
 
 ## Installation
@@ -36,23 +46,26 @@ First, Clone the repository using GitHub website or git in Terminal
 #### Method 1
 
 1. Install all app and python requirements using installer file - `bash installer.sh`
-2. Apply the migrations `python3 manage.py migrate`.<br>
-3. Finally, run the development server `python3 manage.py runserver`.<br>
-4. The project will be available at <http://127.0.0.1:8000> 
+2. Change directory to the the Django Project directory `cd pygoat`<br>
+3. Apply the migrations `python3 manage.py migrate`.<br>
+4. Finally, run the development server `python3 manage.py runserver`.<br>
+5. The project will be available at <http://127.0.0.1:8000> 
 
 #### Method 2
 
 1. Install python3 requirements `pip install -r requirements.txt`.<br> 
-2. Apply the migrations `python3 manage.py migrate`.<br>
-3. Finally, run the development server `python3 manage.py runserver`.<br>
-4. The project will be available at <http://127.0.0.1:8000> 
+2. Change directory to the the Django Project directory `cd pygoat`<br>
+3. Apply the migrations `python3 manage.py migrate`.<br>
+4. Finally, run the development server `python3 manage.py runserver`.<br>
+5. The project will be available at <http://127.0.0.1:8000> 
 
 #### Method 3
 
 1. Install all app and python requirements using `setup.py` file - `pip3 install .`
-2. Apply the migrations `python3 manage.py migrate`.<br>
-3. Finally, run the development server `python3 manage.py runserver`.<br>
-4. The project will be available at <http://127.0.0.1:8000> 
+2. Change directory to the the Django Project directory `cd pygoat`<br>
+3. Apply the migrations `python3 manage.py migrate`.<br>
+4. Finally, run the development server `python3 manage.py runserver`.<br>
+5. The project will be available at <http://127.0.0.1:8000> 
 
 ### Docker Container
 1. Install [Docker](https://www.docker.com)
@@ -67,9 +80,10 @@ First, Clone the repository using GitHub website or git in Terminal
 
 ### Build Docker Image and Run
 1. Clone the repository  &ensp; `git clone https://github.com/adeyosemanputra/pygoat.git` 
-2. Build the docker image from Dockerfile using &ensp; `docker build -f Dockerfile -t pygoat .`
-3. Run the docker image &ensp;`docker run --rm -p 8000:8000 pygoat:latest`
-4. Browse to <http://127.0.0.1:8000> or <http://0.0.0.0:8000> 
+2. Change the directory where Dockerfile exists  &ensp; `cd pygoat`
+3. Build the docker image from Dockerfile using &ensp; `docker build -f Dockerfile -t pygoat .`
+4. Run the docker image &ensp;`docker run --rm -p 8000:8000 pygoat:latest`
+5. Browse to <http://127.0.0.1:8000> or <http://0.0.0.0:8000> 
 
 ### Installation video 
 
@@ -77,9 +91,6 @@ First, Clone the repository using GitHub website or git in Terminal
  - [Installing PyGoat from Source](https://www.youtube.com/watch?v=7bYBJXG3FRQ)
 2. Without using `installer.sh`
  - [![](http://img.youtube.com/vi/rfzQiMeiwso/0.jpg)](http://www.youtube.com/watch?v=rfzQiMeiwso "Installation Pygoat")
-3. Install with Mac M1 (using Virtualenv)
- - [![](http://img.youtube.com/vi/rfzQiMeiwso/0.jpg)](https://youtu.be/a5UV7mUw580 "Install with Mac M1 - using Virtualenv")
-
 
 ## Uninstallation
 
@@ -98,7 +109,16 @@ $ python3 uninstaller.py
 ```
 
 ## Solutions 
-<a href="/Solutions/solution.md">Solutions to all challenges</a>
+<a href="/pygoat/Solutions/solution.md">Solutions to all challenges</a>
+
+## Live Demo
+http://pygoat-web.herokuapp.com <br>
+http://pygoat.herokuapp.com <br>
+http://pygoat-dep.herokuapp.com <br>
+credentials:<br>
+username : user<br>
+password : user12345<br>
+or you could login with 0auth (google) <br>
 
 ## Contributors ✨
 
@@ -119,7 +139,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/RupakBiswas-2304"><img src="https://avatars.githubusercontent.com/u/75058161?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Metaphor</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=RupakBiswas-2304" title="Code">💻</a></td>
-    <td align="center"><a href="https://whokilleddb.github.io"><img src="https://avatars.githubusercontent.com/u/56482137?v=4?s=100" width="100px;" alt=""/><br /><sub><b>whokilleddb</b></sub></a><br /><a href="https://github.com/adeyosemanputra/pygoat/commits?author=whokilleddb" title="Code">💻</a></td>
   </tr>
 </table>
 
